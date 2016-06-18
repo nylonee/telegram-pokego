@@ -1,0 +1,4 @@
+git+https://github.com/cython/cython
+git+https://github.com/python-pillow/Pillow
+git+https://github.com/madmaze/pytesseract
+git+https://github.com/nickoala/telepot
