@@ -7,9 +7,12 @@ pull useful information from the screenshot.
 # Running The Bot
 
 ```
+cd telegram-pokego
 pip install -r requirements.txt --upgrade
+echo "TOKEN = 'TELEGRAM_BOT_TOKEN'" > secrets.py
 python3 pokebot.py
 ```
+Don't forget to generate a [telegram bot](https://core.telegram.org/bots) token, and disable the privacy.
 
 # Features
  * Pulls Pokemon, candy required to evolve, HP from screenshots
