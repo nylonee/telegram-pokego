@@ -150,7 +150,7 @@ class PokeGuesser():
         self.pokedex[126] = {'pokemon': 'Magmar', 'evolve': False, 'line': 'MAGMAR', 'stage': 1}
         self.pokedex[127] = {'pokemon': 'Pinsir', 'evolve': False, 'line': 'PINSIR', 'stage': 1}
         self.pokedex[128] = {'pokemon': 'Tauros', 'evolve': False, 'line': 'TAUROS', 'stage': 1}
-        self.pokedex[129] = {'pokemon': 'Magikarp', 'evolve': True, 'line': 'MAGIKARP', 'stage': 2, 'candy': 100}
+        self.pokedex[129] = {'pokemon': 'Magikarp', 'evolve': True, 'line': 'MAGIKARP', 'stage': 2, 'candy': 400}
         self.pokedex[130] = {'pokemon': 'Gyarados', 'evolve': False, 'line': 'MAGIKARP', 'stage': 2}
         self.pokedex[131] = {'pokemon': 'Lapras', 'evolve': False, 'line': 'LAPRAS', 'stage': 1}
         self.pokedex[132] = {'pokemon': 'Ditto', 'evolve': False, 'line': 'DITTO', 'stage': 1}
