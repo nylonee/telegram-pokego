@@ -1,6 +1,7 @@
 photos/*
 secrets.py
 pokemon.txt
+*.jpg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

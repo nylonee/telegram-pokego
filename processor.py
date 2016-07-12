@@ -10,6 +10,11 @@ class ImageProcessor():
     """make an image OCR-able, and regex the text to file"""
     def __init__(self, f):
         self.f = f
+        try:
+            open(self.f, 'x') # attempt to create the file
+            print("pokemon.txt file not found, created a new file")
+        except FileExistsError:
+            pass
 
     def _scan_photo(self, phototext):
         print(phototext)
@@ -18,7 +23,7 @@ class ImageProcessor():
         pokemonline = self._regex_match(r'UST ([A-Z]*)\'S CAN', phototext)
         evolve = self._regex_match(r'(EVOLVE)[ ]?.*', phototext)
         evolve_candy = self._regex_match(r'EVOL[\D]{1,10}([\d]{2,3})', phototext)
-        
+
         return {'hp':hp, 'pokemon':pokemonline, 'evolve':evolve, 'candy':evolve_candy}
 
     def _regex_match(self, regex, text):
@@ -36,7 +41,11 @@ class ImageProcessor():
             last = None
             for last in (line for line in f if line.rstrip('\n')):
                 pass
-        return ast.literal_eval(last)
+
+        try:
+            return ast.literal_eval(last)
+        except ValueError:
+            return None
 
     def _manipulate_photo(self, path):
         """given a photo path, manipulate the photo for better OCR"""
