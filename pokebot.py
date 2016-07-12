@@ -46,15 +46,6 @@ class PokeBot(telepot.aio.Bot):
         new = self.im.process_photo('{}.jpg'.format(file_id), {'user':msg['from']['id']})
         print(new)
 
-        # upload pokemon line and HP to the public sheet
-        # note: will fail if pokemon line or HP could not be pulled
-        # view all responses here: https://goo.gl/XJZeof
-        """try:
-            pikaform = 'https://docs.google.com/forms/d/1J1WYkqPPu4z2grgy5MjPZ--qzHQZcJliOL1hqrR49K8/formResponse'
-            requests.post(pikaform, {'entry.1962155915': str(new['pokemon']), 'entry.129956651': int(new['hp'])})
-        except TypeError:
-            pass"""
-
         try:
             if(int(last['hp']) < int(new['hp']) and
                     str(last['user']) == str(msg['from']['id']) and
