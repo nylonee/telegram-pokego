@@ -5,7 +5,7 @@ from processor import ImageProcessor
 from pokemon_guesser import PokeGuesser
 
 # telegram bot dependencies
-import telepot, telepot.async
+import telepot, telepot.aio
 try:
     from secrets import TOKEN
 except ImportError:
@@ -18,10 +18,10 @@ except ImportError:
 import ast, requests
 import re, time, asyncio
 
-class PokeBot(telepot.async.Bot):
+class PokeBot(telepot.aio.Bot):
     def __init__(self, *args, **kwargs):
         super(PokeBot, self).__init__(*args, **kwargs)
-        self._answerer = telepot.async.helper.Answerer(self)
+        self._answerer = telepot.aio.helper.Answerer(self)
         self.im = ImageProcessor("pokemon.txt")
         self.pokedex = PokeGuesser()
 
