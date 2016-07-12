@@ -17,7 +17,7 @@ class PokeGuesser():
                     if data['stage'] < 3 or evolve is False:
                         return data['pokemon']
                     elif int(candy) == data['candy']: # 3 stage pokemon, candy matches
-                                return data['pokemon']
+                        return data['pokemon']
                 except KeyError:
                     continue
 
